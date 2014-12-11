@@ -1,0 +1,56 @@
+<div class="container">
+	<h1>Listing airlines</h1>
+
+	<table class="table">
+	  <thead>
+	    <tr>
+	      <th><%= sortable "Airline" %></th>
+	      <th><%= sortable "Carry-on" %></th>
+	      <th><%= sortable "First Checked Bag" %></th>
+	      <th><%= sortable "Second Checked Bag" %></th>
+	      <th><%= sortable "Additional Bags" %></th>
+	      <th><%= sortable "Overweight Bags" %></th>
+	      <th><%= sortable "Oversized Bags" %></th>
+	      <th><%= sortable "Ticket Change (domestic flights only)" %></th>
+	      <th><%= sortable "Booking (on phone/in person)" %></th>
+	      <th><%= sortable "Unaccompanied Minors (double for round trip)" %></th>
+	      <th><%= sortable "Pets (double for round trip)" %></th>
+	      <th><%= sortable "Seat Selection (double for round trip)" %></th>
+	      <th><%= sortable "Premium Seat Selection (double for round trip)" %></th>
+	      <th><%= sortable "In-Flight Food" %></th>
+	      <th><%= sortable "Blankets/Pillow" %></th>
+	      <th colspan="3"></th>
+	    </tr>
+	  </thead>
+
+	  <tbody>
+	    <% @airlines.each do |airline| %>
+	      <tr>
+	        <td><%= airline.name %></td>
+	        <td><%= airline.carry_on %></td>
+	        <td><%= airline.first_checked_bag %></td>
+	        <td><%= airline.second_checked_bag %></td>
+					<td><%= airline.additional_bags %></td>
+					<td><%= airline.overweight_bags %></td>
+					<td><%= airline.oversized_bags %></td>
+					<td><%= airline.ticket_change_fee_domestic_only %></td>
+					<td><%= airline.booking_fee %></td>
+					<td><%= airline.unaccompanied_minor %></td>
+					<td><%= airline.pet %></td>
+					<td><%= airline.seat_selection %></td>
+					<td><%= airline.premium_seat_selection %></td>
+					<td><%= airline.in_flight_food %></td>
+					<td><%= airline.balnkets_pillow %></td>
+	        <td><%= link_to 'Show', airline %></td>
+	        <td><%= link_to 'Edit', edit_airline_path(airline) %></td>
+	        <td><%= link_to 'Destroy', airline, method: :delete %></td>
+	      </tr>
+	    <% end %>
+	  </tbody>
+	</table>
+
+	<br>
+
+	<%= link_to 'New Airline', new_airline_path %>
+
+</div>

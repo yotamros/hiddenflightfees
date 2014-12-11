@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  carry_on: MyString
+  pet: MyString
+  food: MyString
+
+two:
+  name: MyString
+  carry_on: MyString
+  pet: MyString
+  food: MyString

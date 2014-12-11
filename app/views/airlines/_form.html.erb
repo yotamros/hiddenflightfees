@@ -1,0 +1,83 @@
+<div class="container">
+
+	<%= form_for(@airline) do |f| %>
+	  <% if @airline.errors.any? %>
+	    <div id="error_explanation">
+	      <h2><%= pluralize(@airline.errors.count, "error") %> prohibited this airline from being saved:</h2>
+
+	      <ul>
+	      <% @airline.errors.full_messages.each do |message| %>
+	        <li><%= message %></li>
+	      <% end %>
+	      </ul>
+	    </div>
+	  <% end %>
+
+	  <div class="field">
+	    <%= f.label :airline_name %><br>
+	    <%= f.text_field :name %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :carry_on %><br>
+	    <%= f.text_field :carry_on %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :first_checked_bag %><br>
+	    <%= f.text_field :first_checked_bag %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :second_checked_bag %><br>
+	    <%= f.text_field :second_checked_bag %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :additional_bags %><br>
+	    <%= f.text_field :additional_bags %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :overweight_bags %><br>
+	    <%= f.text_field :overweight_bags %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :oversized_bags %><br>
+	    <%= f.text_field :oversized_bags %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :ticket_change_fee_domestic_only %><br>
+	    <%= f.text_field :ticket_change_fee_domestic_only %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :booking_fee %><br>
+	    <%= f.text_field :booking_fee %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :unaccompanied_minor %><br>
+	    <%= f.text_field :unaccompanied_minor %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :pet %><br>
+	    <%= f.text_field :pet %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :seat_selection %><br>
+	    <%= f.text_field :seat_selection %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :premium_seat_selection %><br>
+	    <%= f.text_field :premium_seat_selection %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :in_flight_food %><br>
+	    <%= f.text_field :in_flight_food %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :balnkets_pillow %><br>
+	    <%= f.text_field :balnkets_pillow %>
+	  </div>
+
+
+	  <div class="actions">
+	    <%= f.submit %>
+	  </div>
+	<% end %>
+
+</div>
